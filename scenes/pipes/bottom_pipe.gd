@@ -19,3 +19,4 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D):
 	if body.is_in_group("Ghost"):	# 충돌 그룹이 Ghost라면
 		GameManager.set_game_over(true)	# 게임 오버
+		GameManager.play_game_over_sound()	# 게임 오버 사운드 재생

@@ -18,4 +18,5 @@ func _physics_process(delta: float) -> void:
 	
 	if global_position.y <= MIN_Y_POSITION or global_position.y >= MAX_Y_POSITION:
 		GameManager.game_over = true
-		# 게임 오버 상하단 좌표 이상으로 벗어나면 게임 오버
+		GameManager.play_game_over_sound()
+		# 게임 오버 상하단 좌표 이상으로 벗어나면 게임 오버 및 사운드 재생

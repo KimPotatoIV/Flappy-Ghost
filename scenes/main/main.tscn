@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://lww4b2cmykx7"]
+[gd_scene load_steps=9 format=3 uid="uid://lww4b2cmykx7"]
 
 [ext_resource type="PackedScene" uid="uid://uqu4s1jl75ku" path="res://scenes/background/background.tscn" id="1_bp1h3"]
 [ext_resource type="PackedScene" uid="uid://brvpnmyj0mybw" path="res://scenes/ghost/ghost.tscn" id="2_q670m"]
 [ext_resource type="Script" path="res://scenes/main/canvas_layer.gd" id="3_5cb1p"]
 [ext_resource type="Script" path="res://scenes/main/pipe_spawner.gd" id="3_7el6n"]
 [ext_resource type="FontFile" uid="uid://eg37l3twt6m5" path="res://fonts/neodgm.ttf" id="5_f552i"]
+[ext_resource type="AudioStream" uid="uid://sxa6ip4owp53" path="res://sounds/flappy_ghost.wav" id="6_6wwcr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gw7fr"]
 font = ExtResource("5_f552i")
@@ -64,3 +65,8 @@ layout_mode = 2
 text = "SCORE 000"
 label_settings = SubResource("LabelSettings_bnxux")
 horizontal_alignment = 2
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6wwcr")
+volume_db = -10.0
+autoplay = true
