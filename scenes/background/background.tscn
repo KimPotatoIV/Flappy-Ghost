@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://uqu4s1jl75ku"]
+
+[ext_resource type="Texture2D" uid="uid://cid3jd1g7ip71" path="res://scenes/background/background_ground.png" id="1_4pxxj"]
+[ext_resource type="Texture2D" uid="uid://dtmpuwtb8xks5" path="res://scenes/background/background_house.png" id="2_ect57"]
+[ext_resource type="Script" path="res://scenes/background/background.gd" id="2_h4s3k"]
+
+[node name="Background" type="Sprite2D"]
+texture = ExtResource("1_4pxxj")
+centered = false
+script = ExtResource("2_h4s3k")
+metadata/_edit_group_ = true
+
+[node name="House1" type="Sprite2D" parent="."]
+texture = ExtResource("2_ect57")
+centered = false
+
+[node name="House2" type="Sprite2D" parent="."]
+position = Vector2(720, 0)
+texture = ExtResource("2_ect57")
+centered = false

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bglq0ik74irfm"]
+
+[ext_resource type="Script" path="res://scenes/pipes/bottom_pipe.gd" id="1_le5rr"]
+[ext_resource type="Texture2D" uid="uid://cjxom3oijq4qm" path="res://scenes/pipes/pipe.png" id="2_perp0"]
+
+[node name="Pipe" type="Area2D"]
+script = ExtResource("1_le5rr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 1)
+texture = ExtResource("2_perp0")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(73, 151)
+polygon = PackedVector2Array(-71, -148, -2, -148, -2, -103, -8, -103, -8, 484, -64, 484, -65, -103, -71, -103)
